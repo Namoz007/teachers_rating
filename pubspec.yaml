@@ -1,0 +1,27 @@
+name: teachers
+description: "A new Flutter project."
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: ^3.6.1
+
+dependencies:
+  flutter:
+    sdk: flutter
+  bloc: ^9.0.0
+  flutter_bloc: ^9.0.0
+  dio: ^5.8.0+1
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+  get_it: ^8.0.3
+  shared_preferences: ^2.5.1
+  shimmer: ^3.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
