@@ -63,7 +63,9 @@ class _SignInScreenState extends State<SignInScreen> {
               height: 5,
             ),
             GestureDetector(
-              onTap: () {},
+              onTap: () {
+                showDialog(context: context, builder: (context) => ForgotPassword(),barrierDismissible: false,);
+              },
               child: Text(
                 "Forgot password",
                 style: TextStyle(

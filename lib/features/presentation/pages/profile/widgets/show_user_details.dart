@@ -101,16 +101,16 @@ class _ShowUserDetailsState extends State<ShowUserDetails> {
                               UpdateUserManagementEvent(model: widget.model));
                         }
                       },
-                      child: Text(widget.model.fullName),
+                      child: Text(widget.model.fullName,overflow: TextOverflow.ellipsis,),
                     ),
                     const SizedBox(
                       height: 16,
                     ),
-                    Text(widget.model.email),
+                    Text(widget.model.email,overflow: TextOverflow.ellipsis,),
                     const SizedBox(
                       height: 16,
                     ),
-                    Text(widget.model.role.name),
+                    Text(widget.model.role.name,overflow: TextOverflow.ellipsis,),
                     const SizedBox(
                       height: 16,
                     ),
@@ -129,13 +129,13 @@ class _ShowUserDetailsState extends State<ShowUserDetails> {
                         },
                         child: Text(widget.model.birthday == null
                             ? "not available"
-                            : '${widget.model.birthday!.day}.${widget.model.birthday!.month}.${widget.model.birthday!.year}-year')),
+                            : '${widget.model.birthday!.day}.${widget.model.birthday!.month}.${widget.model.birthday!.year}-year',overflow: TextOverflow.ellipsis,)),
                     const SizedBox(height: 16,),
                     if(widget.model.role == user_role.teacher) Column(
                       crossAxisAlignment: CrossAxisAlignment.end,
                       children: [
                         GestureDetector(
-                          child: Text(widget.model.subject ?? "not available"),
+                          child: Text(widget.model.subject ?? "not available",overflow: TextOverflow.ellipsis,),
                           onTap: () async {
                             final data = await showDialog(
                               context: context,
@@ -170,7 +170,7 @@ class _ShowUserDetailsState extends State<ShowUserDetails> {
                             }
                           },
                           child:
-                          Text(widget.model.universityName ?? "not available"),
+                          Text(widget.model.universityName ?? "not available",overflow: TextOverflow.ellipsis,),
                         ),
                         SizedBox(
                           height: 16,

@@ -45,7 +45,12 @@ class AuthenticationDataSource {
     }
   }
 
-  void resetPassword(String email) {
-    //
+  void resetPassword(String email) async{
+    try{
+      await _dio.post("https://identitytoolkit.googleapis.com/v1/accounts:sendOobCode?key=AIzaSyAh9N6yt6tdaVM0hx9_IlT4F0yaKZ5Xun8",
+          data: {"requestType":"PASSWORD_RESET","email": "$email"});
+    }catch(e){
+      //
+    }
   }
 }
